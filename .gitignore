@@ -1,0 +1,8 @@
+# 帳密和個人執行紀錄
+citydao_secret.json
+citydao_auto_state.json
+citydao_auto.log
+CLAUDE.md
+
+__pycache__/
+*.pyc
