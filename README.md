@@ -19,6 +19,7 @@
 4. 到訂單紀錄把還沒處理的寶箱換成鑽石：A 金寶箱 5000、B 銀寶箱 3000、C 銅寶箱 1100
 
 同一套只會抽一次（抽過的會記在 `citydao_auto_state.json`），重複執行也不會多抽。
+`citydao_auto.log` 是執行紀錄，repo 裡附的是一次實際執行的範例。
 
 > 腳本直接呼叫網站前端用的 API，不開瀏覽器。
 
@@ -26,13 +27,13 @@
 
 1. 安裝 [Python 3](https://www.python.org/downloads/)，安裝時勾選「Add python.exe to PATH」
 2. 下載這個 repo（綠色 **Code** 按鈕 → **Download ZIP**），解壓縮到一個固定的資料夾
-3. 把 `citydao_secret.example.json` 複製一份，改名為 `citydao_secret.json`，填入自己的帳密：
+3. 用記事本打開 `citydao_secret.json`，在引號中間填入自己的帳密：
 
    ```json
    {"email": "你的帳號(Email)", "password": "你的密碼"}
    ```
 
-   `citydao_secret.json` 已列在 `.gitignore`，不會被上傳。
+   填了帳密之後，就不要再把這個檔案上傳或傳給別人。
 
 4. 在這個資料夾開 PowerShell，先手動跑一次確認沒問題：
 

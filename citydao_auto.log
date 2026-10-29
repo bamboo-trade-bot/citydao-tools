@@ -1,0 +1,10 @@
+2026-10-29 15:31:21 INFO ===== 開始 =====
+2026-10-29 15:31:21 INFO 目前套組: 老闆發瘋蒐藏系列070 (id 2478) 剩 151/300，每人限 1 抽
+2026-10-29 15:31:21 INFO 登入成功，目前鑽石 3,666
+2026-10-29 15:31:21 INFO 抽獎回應: {"status": "revealed", "orderId": 339571, "orderNo": "LOT202610290731223935665833550", "lotterySetId": 2478, "lotterySetName": "老闆發瘋蒐藏系列070", "totalAmount": 1000, "drawCount": 1, "drawNumbers": [136], "prizes": [{"id": 2240149, "lotterySetId": 2478, "lotterySetName": "老闆發瘋蒐藏系列070", "drawNumber": 136, "lotteryPrizeId": 14564, "prizeName": "銅寶箱 (隨機1100鑽石以上商品)", "prizeRank": "C", "prizeImage": "prod/lottery_set/14564_Aaobi.webp", "prizePoints": 1100, "isGrandPrize": true, "shippingOnly": false, "drawSequence": 150, "category": "OD", "status": 0, "costValue": null, "createdAt": 1793259082403}], "extendTimeRightStatus": 0, "gamePointsAfter": 2666}
+2026-10-29 15:31:21 INFO 已抽號碼 136
+2026-10-29 15:31:25 INFO 待換: C賞 銅寶箱 (隨機1100鑽石以上商品) → 1100 鑽
+2026-10-29 15:31:25 INFO 成功兌換 1 個獎品，獲得 1,100 鑽石
+2026-10-29 15:31:25 INFO ===== 結束 =====
+2026-10-29 15:32:48 INFO ===== 開始 =====
+2026-10-29 15:32:48 INFO 目前套組: 老闆發瘋蒐藏系列070 (id 2478) 剩 150/300，每人限 1 抽

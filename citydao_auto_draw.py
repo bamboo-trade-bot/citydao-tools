@@ -103,6 +103,8 @@ def api(method, path, body=None, token=None):
 
 def login():
     creds = json.loads(SECRET.read_text(encoding="utf-8"))
+    if not creds.get("email") or not creds.get("password"):
+        raise ApiError(f"請先在 {SECRET.name} 填入帳號密碼")
     d = api("POST", "/member/login", {"account": creds["email"], "password": creds["password"]})
     log.info("登入成功，目前鑽石 %s", f"{d.get('gamePoints', 0):,}")
     return d["token"]
