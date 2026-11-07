@@ -10,6 +10,8 @@
     3. 把每套的額度抽完：限 1 抽的抽 1 抽，多抽的每次 10 抽 (10 抽才有寶箱)
     4. 訂單紀錄裡這些套組「尚未選擇」的獎品全部換成鑽石
     5. 寶箱管理裡的寶箱全部開啟
+    6. 有套組沒抽滿 (例如別人正在抽、套組被保護中) 就隔 10 分鐘再試，直到抽到不能再抽；
+       鑽石不夠的話換完鑽石、開完寶箱夠了就馬上接著抽，還是不夠才放棄
 
 用法:
     python citydao_auto_draw.py                  # 正式執行 (排程每天 12:30 跑這個)
@@ -37,6 +39,7 @@ SECRET = HERE / "citydao_secret.json"
 STATE = HERE / "citydao_auto_state.json"
 
 BATCH = 10                      # 多抽的套組每次抽 10 抽，才會送寶箱
+RETRY_WAIT = 600                # 沒抽滿時隔多久再試 (秒)
 BOX_NAMES = ("金寶箱", "銀寶箱", "銅寶箱")
 LIMIT_RE = re.compile(r"每人有抽獎數量\s*(\d+)\s*限制[，,]\s*您剩下\s*(\d+)\s*單")
 
@@ -127,6 +130,9 @@ class Client:
     """帶登入狀態的 API 呼叫。被登出 (401) 就自動重新登入再送一次；401 代表請求沒被處理，重送不會重複抽。"""
 
     def __init__(self):
+        self.relogin()
+
+    def relogin(self):
         self.token, self.points = login()
 
     def call(self, method, path, body=None):
@@ -136,7 +142,7 @@ class Client:
             if e.status != 401:
                 raise
             log.info("被登出了 (%s)，重新登入再試", e)
-            self.token, self.points = login()
+            self.relogin()
             return api(method, path, body, self.token)
 
 
@@ -178,7 +184,8 @@ def draw_numbers(client, set_id, n):
 
 
 def draw_set(client, s, state):
-    """把一套的每人額度抽完。限 1 抽的抽 1 抽，其他每次抽 10 抽。"""
+    """抽一輪，把一套的每人額度抽完。限 1 抽的抽 1 抽，其他每次抽 10 抽。
+    回傳 "done" 不能再抽了、"retry" 這次被擋要再試、"poor" 鑽石不夠。"""
     limit, price = s["drawLimit"], s["clientPrice"]
     batch = min(BATCH, limit)
     rounds = limit // batch
@@ -189,19 +196,26 @@ def draw_set(client, s, state):
     for _ in range(rounds):
         cost = batch * price
         if client.points < cost:
-            log.warning("鑽石不足 (剩 %s，這次要 %s)，這套先停在 %s 抽", f"{client.points:,}", f"{cost:,}", done)
-            return
+            log.warning("鑽石不足 (剩 %s，這次要 %s)，這輪先停在 %s 抽", f"{client.points:,}", f"{cost:,}", done)
+            return "poor"
         try:
             r = draw_numbers(client, s["id"], batch)
-        except ApiError as e:
+        except (ApiError, OSError) as e:
             m = LIMIT_RE.search(str(e))
-            if m:
+            if m and int(m.group(2)) < batch:
                 log.info("這套額度已用完 (限 %s 抽，剩 %s 抽)", m.group(1), m.group(2))
-                if int(m.group(2)) < batch:
-                    remember(state, "drawn_sets", s["id"])
-                return
-            log.error("抽獎失敗: %s", e)
-            return
+                remember(state, "drawn_sets", s["id"])
+                return "done"
+            if any(w in str(e) for w in ("上限", "限制", "已達")):
+                log.info("這套不能再抽了: %s", e)
+                remember(state, "drawn_sets", s["id"])
+                return "done"
+            if "剩餘號碼不足" in str(e):
+                log.info("這套快抽完了，不能再抽: %s", e)
+                remember(state, "drawn_sets", s["id"])
+                return "done"
+            log.warning("這輪抽到 %s 抽被擋: %s", done, e)
+            return "retry"
         remember(state, "daily_sets", s["id"])
         done += batch
         client.points = r.get("gamePointsAfter", client.points - cost)
@@ -210,11 +224,12 @@ def draw_set(client, s, state):
         for p in prizes:
             key = f"{p.get('prizeRank', '?')}賞 {p.get('prizeName', '')}"
             got[key] = got.get(key, 0) + 1
-        log.info("抽了 %s 抽 (累計 %s/%s)：%s，剩 %s 鑽", batch, done, limit,
+        log.info("抽了 %s 抽 (這輪累計 %s，每人限 %s)：%s，剩 %s 鑽", batch, done, limit,
                  "、".join(f"{k} x{v}" for k, v in got.items()), f"{client.points:,}")
         extra = {k: v for k, v in r.items() if k not in ("prizes", "drawNumbers")}
         log.info("  其他回應欄位: %s", json.dumps(extra, ensure_ascii=False)[:600])
     remember(state, "drawn_sets", s["id"])
+    return "done"
 
 
 def exchange_items(client, set_ids):
@@ -269,6 +284,36 @@ def open_boxes(client):
     return total
 
 
+def run_until_done(client, sets, state):
+    """抽 → 換鑽石 → 開寶箱，一直重複到每套都不能再抽，或套組結束。"""
+    pending = [s for s in sets if s["id"] not in state["drawn_sets"]]
+    while True:
+        results = [(s, draw_set(client, s, state)) for s in pending]
+        time.sleep(3)    # 等訂單、寶箱建立
+        exchange_items(client, state["daily_sets"] + [s["id"] for s in sets])
+        open_boxes(client)
+        client.relogin()    # 順便拿到換完之後的正確鑽石數
+
+        pending, wait = [], False
+        for s, result in results:
+            if result == "retry":
+                if (time.time() + RETRY_WAIT) * 1000 < s["drawEndTime"]:
+                    pending.append(s)
+                    wait = True
+                else:
+                    log.warning("%s 快結束了，不再重試", s["name"])
+            elif result == "poor":
+                if client.points >= min(BATCH, s["drawLimit"]) * s["clientPrice"]:
+                    pending.append(s)
+                else:
+                    log.warning("%s 鑽石不夠，換完鑽石也抽不了，這次不抽了", s["name"])
+        if not pending:
+            return
+        if wait:
+            log.info("還有 %s 套沒抽滿，%d 分鐘後再試", len(pending), RETRY_WAIT // 60)
+            time.sleep(RETRY_WAIT)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="只列出今天會抽哪些套組，不登入不抽")
@@ -289,14 +334,7 @@ def main():
             return
 
         client = Client()
-        for s in sets:
-            if s["id"] in state["drawn_sets"]:
-                continue
-            draw_set(client, s, state)
-        time.sleep(3)    # 等訂單、寶箱建立
-        got = exchange_items(client, state["daily_sets"] + [s["id"] for s in sets])
-        got += open_boxes(client)
-        log.info("目前鑽石約 %s", f"{client.points + got:,}")
+        run_until_done(client, sets, state)
     except Exception:
         log.exception("執行失敗")
         sys.exit(1)
