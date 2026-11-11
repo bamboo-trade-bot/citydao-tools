@@ -3,7 +3,7 @@
 直接打網站自己前端用的 API (跟 citydao_ev.py 同一套)，不開瀏覽器。
 網頁有 Cloudflare 機器人驗證會擋自動化瀏覽器，API 不受影響。
 
-流程 (有多個帳號就每個帳號各做一遍):
+流程 (有多個帳號就一個一個來，前一個帳號抽完才換下一個):
     1. 找所有開放中、有「每人限 N 抽」的套組 (每天中午 12:00 換新)，
        例如老闆發瘋蒐藏系列 (3000/抽 限 1 抽)、特別活動蒐藏系列 (10/抽 限 100 抽)
     2. 登入 (每次執行都重新登入；跑到一半被登出也會自動登回去)
@@ -346,28 +346,24 @@ def run_cycle(client, sets, pending, state):
 
 
 def run_until_done(accounts, sets):
-    """每個帳號輪流跑一輪，一直重複到每個帳號的每套都不能再抽，或套組結束。
-    帳號之間輪流，一個帳號在等重試時不會卡住其他帳號。一個帳號出錯也不影響其他帳號。"""
-    todo = {a["name"]: [s for s in sets if s["id"] not in a["state"]["drawn_sets"]] for a in accounts}
-    active = list(accounts)
-    while active:
-        wait = False
-        for a in list(active):
-            _current["account"] = a["name"]
-            try:
-                if "client" not in a:
-                    a["client"] = Client(a)
-                todo[a["name"]], w = run_cycle(a["client"], sets, todo[a["name"]], a["state"])
-                wait = wait or w
-            except Exception:
-                log.exception("這個帳號執行失敗，今天先跳過")
-                todo[a["name"]] = []
-            if not todo[a["name"]]:
-                active.remove(a)
-        _current["account"] = ""
-        if active and wait:
-            log.info("還有 %s 個帳號沒抽滿，%d 分鐘後再試", len(active), RETRY_WAIT // 60)
-            time.sleep(RETRY_WAIT)
+    """帳號一個一個來：前一個帳號抽到不能再抽 (含 10 分鐘重試) 才換下一個，不會同時跑。
+    一個帳號出錯也不影響後面的帳號。"""
+    for a in accounts:
+        _current["account"] = a["name"]
+        pending = [s for s in sets if s["id"] not in a["state"]["drawn_sets"]]
+        try:
+            client = Client(a)
+            while True:
+                pending, wait = run_cycle(client, sets, pending, a["state"])
+                if not pending:
+                    break
+                if wait:
+                    log.info("還有 %s 套沒抽滿，%d 分鐘後再試", len(pending), RETRY_WAIT // 60)
+                    time.sleep(RETRY_WAIT)
+            log.info("這個帳號完成")
+        except Exception:
+            log.exception("這個帳號執行失敗，換下一個帳號")
+    _current["account"] = ""
 
 
 def main():
