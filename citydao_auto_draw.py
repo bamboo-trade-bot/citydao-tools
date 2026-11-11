@@ -3,7 +3,7 @@
 直接打網站自己前端用的 API (跟 citydao_ev.py 同一套)，不開瀏覽器。
 網頁有 Cloudflare 機器人驗證會擋自動化瀏覽器，API 不受影響。
 
-流程:
+流程 (有多個帳號就每個帳號各做一遍):
     1. 找所有開放中、有「每人限 N 抽」的套組 (每天中午 12:00 換新)，
        例如老闆發瘋蒐藏系列 (3000/抽 限 1 抽)、特別活動蒐藏系列 (10/抽 限 100 抽)
     2. 登入 (每次執行都重新登入；跑到一半被登出也會自動登回去)
@@ -18,7 +18,11 @@
     python citydao_auto_draw.py --check          # 只列出今天會抽哪些套組，不登入不抽
     python citydao_auto_draw.py --exchange-only  # 只做換鑽石 + 開寶箱
 
-帳密放在同資料夾的 citydao_secret.json: {"email": "...", "password": "..."}
+帳密放在同資料夾的 citydao_secret.json，一個帳號:
+    {"email": "...", "password": "..."}
+多個帳號 (name 可省略，會叫 帳號1、帳號2…，log 和抽獎紀錄用這個名字區分):
+    [{"name": "主帳", "email": "...", "password": "..."},
+     {"name": "副帳", "email": "...", "password": "..."}]
 紀錄寫在 citydao_auto.log。
 """
 import argparse
@@ -44,6 +48,14 @@ BOX_NAMES = ("金寶箱", "銀寶箱", "銅寶箱")
 LIMIT_RE = re.compile(r"每人有抽獎數量\s*(\d+)\s*限制[，,]\s*您剩下\s*(\d+)\s*單")
 
 log = logging.getLogger("citydao")
+_current = {"account": ""}      # 目前在處理哪個帳號，log 每行前面會加 [帳號名]
+_root_state = {}
+
+
+class AccountTag(logging.Filter):
+    def filter(self, record):
+        record.account = f"[{_current['account']}] " if _current["account"] else ""
+        return True
 
 
 class ApiError(Exception):
@@ -53,7 +65,8 @@ class ApiError(Exception):
 
 
 def setup_logging():
-    fmt = logging.Formatter("%(asctime)s %(levelname)s %(message)s", "%Y-%m-%d %H:%M:%S")
+    fmt = logging.Formatter("%(asctime)s %(levelname)s %(account)s%(message)s", "%Y-%m-%d %H:%M:%S")
+    log.addFilter(AccountTag())
     fh = logging.FileHandler(HERE / "citydao_auto.log", encoding="utf-8")
     fh.setFormatter(fmt)
     log.addHandler(fh)
@@ -65,24 +78,48 @@ def setup_logging():
     log.setLevel(logging.INFO)
 
 
-def load_state():
+def load_accounts():
+    """citydao_secret.json 可以是單一帳號 {...} 或多帳號 [{...}, {...}]。"""
+    data = json.loads(SECRET.read_text(encoding="utf-8"))
+    if isinstance(data, dict):
+        data = [data]
+    accounts = []
+    for i, a in enumerate(data, 1):
+        accounts.append({"name": a.get("name") or f"帳號{i}",
+                         "email": a.get("email", ""), "password": a.get("password", "")})
+    return accounts
+
+
+def load_state(first_name):
+    """每個帳號各自記錄抽過哪些套組。舊版 (單帳號) 的紀錄歸給第一個帳號。"""
+    global _root_state
     try:
-        state = json.loads(STATE.read_text(encoding="utf-8"))
+        root = json.loads(STATE.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
-        state = {}
-    state.setdefault("drawn_sets", [])                       # 額度已抽完的套組
-    state.setdefault("daily_sets", list(state["drawn_sets"]))  # 抽過的限抽套組，換鑽石只換這些
-    return state
+        root = {}
+    root.setdefault("accounts", {})
+    if "drawn_sets" in root:
+        old = {"drawn_sets": root.pop("drawn_sets"), "daily_sets": root.pop("daily_sets", [])}
+        root["accounts"].setdefault(first_name, old)
+    _root_state = root
+    return root
 
 
-def save_state(state):
-    STATE.write_text(json.dumps(state, ensure_ascii=False, indent=2), encoding="utf-8")
+def account_state(root, name):
+    st = root["accounts"].setdefault(name, {})
+    st.setdefault("drawn_sets", [])                     # 額度已抽完的套組
+    st.setdefault("daily_sets", list(st["drawn_sets"]))  # 抽過的限抽套組，換鑽石只換這些
+    return st
+
+
+def save_state():
+    STATE.write_text(json.dumps(_root_state, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def remember(state, key, set_id):
     if set_id not in state[key]:
         state[key] = (state[key] + [set_id])[-200:]
-        save_state(state)
+        save_state()
 
 
 def api(method, path, body=None, token=None):
@@ -115,9 +152,8 @@ def api(method, path, body=None, token=None):
     return u
 
 
-def login():
+def login(creds):
     """回傳 (token, 目前鑽石)。"""
-    creds = json.loads(SECRET.read_text(encoding="utf-8"))
     if not creds.get("email") or not creds.get("password"):
         raise ApiError(f"請先在 {SECRET.name} 填入帳號密碼")
     d = api("POST", "/member/login", {"account": creds["email"], "password": creds["password"]})
@@ -129,11 +165,12 @@ def login():
 class Client:
     """帶登入狀態的 API 呼叫。被登出 (401) 就自動重新登入再送一次；401 代表請求沒被處理，重送不會重複抽。"""
 
-    def __init__(self):
+    def __init__(self, creds):
+        self.creds = creds
         self.relogin()
 
     def relogin(self):
-        self.token, self.points = login()
+        self.token, self.points = login(self.creds)
 
     def call(self, method, path, body=None):
         try:
@@ -284,33 +321,52 @@ def open_boxes(client):
     return total
 
 
-def run_until_done(client, sets, state):
-    """抽 → 換鑽石 → 開寶箱，一直重複到每套都不能再抽，或套組結束。"""
-    pending = [s for s in sets if s["id"] not in state["drawn_sets"]]
-    while True:
-        results = [(s, draw_set(client, s, state)) for s in pending]
-        time.sleep(3)    # 等訂單、寶箱建立
-        exchange_items(client, state["daily_sets"] + [s["id"] for s in sets])
-        open_boxes(client)
-        client.relogin()    # 順便拿到換完之後的正確鑽石數
+def run_cycle(client, sets, pending, state):
+    """一個帳號跑一輪：抽 → 換鑽石 → 開寶箱。回傳 (下一輪還要抽的套組, 是否要等 10 分鐘)。"""
+    results = [(s, draw_set(client, s, state)) for s in pending]
+    time.sleep(3)    # 等訂單、寶箱建立
+    exchange_items(client, state["daily_sets"] + [s["id"] for s in sets])
+    open_boxes(client)
+    client.relogin()    # 順便拿到換完之後的正確鑽石數
 
-        pending, wait = [], False
-        for s, result in results:
-            if result == "retry":
-                if (time.time() + RETRY_WAIT) * 1000 < s["drawEndTime"]:
-                    pending.append(s)
-                    wait = True
-                else:
-                    log.warning("%s 快結束了，不再重試", s["name"])
-            elif result == "poor":
-                if client.points >= min(BATCH, s["drawLimit"]) * s["clientPrice"]:
-                    pending.append(s)
-                else:
-                    log.warning("%s 鑽石不夠，換完鑽石也抽不了，這次不抽了", s["name"])
-        if not pending:
-            return
-        if wait:
-            log.info("還有 %s 套沒抽滿，%d 分鐘後再試", len(pending), RETRY_WAIT // 60)
+    pending, wait = [], False
+    for s, result in results:
+        if result == "retry":
+            if (time.time() + RETRY_WAIT) * 1000 < s["drawEndTime"]:
+                pending.append(s)
+                wait = True
+            else:
+                log.warning("%s 快結束了，不再重試", s["name"])
+        elif result == "poor":
+            if client.points >= min(BATCH, s["drawLimit"]) * s["clientPrice"]:
+                pending.append(s)
+            else:
+                log.warning("%s 鑽石不夠，換完鑽石也抽不了，這次不抽了", s["name"])
+    return pending, wait
+
+
+def run_until_done(accounts, sets):
+    """每個帳號輪流跑一輪，一直重複到每個帳號的每套都不能再抽，或套組結束。
+    帳號之間輪流，一個帳號在等重試時不會卡住其他帳號。一個帳號出錯也不影響其他帳號。"""
+    todo = {a["name"]: [s for s in sets if s["id"] not in a["state"]["drawn_sets"]] for a in accounts}
+    active = list(accounts)
+    while active:
+        wait = False
+        for a in list(active):
+            _current["account"] = a["name"]
+            try:
+                if "client" not in a:
+                    a["client"] = Client(a)
+                todo[a["name"]], w = run_cycle(a["client"], sets, todo[a["name"]], a["state"])
+                wait = wait or w
+            except Exception:
+                log.exception("這個帳號執行失敗，今天先跳過")
+                todo[a["name"]] = []
+            if not todo[a["name"]]:
+                active.remove(a)
+        _current["account"] = ""
+        if active and wait:
+            log.info("還有 %s 個帳號沒抽滿，%d 分鐘後再試", len(active), RETRY_WAIT // 60)
             time.sleep(RETRY_WAIT)
 
 
@@ -321,20 +377,30 @@ def main():
     args = ap.parse_args()
     setup_logging()
     log.info("===== 開始 =====")
-    state = load_state()
     try:
+        accounts = load_accounts()
+        root = load_state(accounts[0]["name"])
+        for a in accounts:
+            a["state"] = account_state(root, a["name"])
         sets = [] if args.exchange_only else find_daily_sets(tries=1 if args.check else 6)
         for s in sets:
+            done = [a["name"] for a in accounts if s["id"] in a["state"]["drawn_sets"]]
             log.info("限抽套組: %s (id %s) %s 鑽/抽，每人限 %s 抽，剩 %s/%s%s", s["name"], s["id"],
                      s["clientPrice"], s["drawLimit"], s["remainingSets"], s["totalSets"],
-                     "，已抽完額度" if s["id"] in state["drawn_sets"] else "")
+                     f"，已抽完額度: {'、'.join(done)}" if done else "")
         if not sets and not args.exchange_only:
             log.warning("找不到開放中的限抽套組")
         if args.check:
+            log.info("帳號: %s", "、".join(a["name"] for a in accounts))
             return
 
-        client = Client()
-        run_until_done(client, sets, state)
+        ready = [a for a in accounts if a["email"] and a["password"]]
+        for a in accounts:
+            if a not in ready:
+                log.warning("[%s] 帳號或密碼是空的，跳過", a["name"])
+        if not ready:
+            raise ApiError(f"請先在 {SECRET.name} 填入帳號密碼")
+        run_until_done(ready, sets)
     except Exception:
         log.exception("執行失敗")
         sys.exit(1)

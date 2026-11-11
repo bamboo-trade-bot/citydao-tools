@@ -205,3 +205,251 @@
 2026-11-07 13:48:14 INFO ===== 開始 =====
 2026-11-07 13:48:14 INFO 限抽套組: 老闆發瘋蒐藏系列080 (id 2565) 3000 鑽/抽，每人限 1 抽，剩 187/300，已抽完額度
 2026-11-07 13:48:14 INFO 限抽套組: 特別活動蒐藏系列071 (id 2564) 10 鑽/抽，每人限 100 抽，剩 19981/30000
+2026-11-07 13:54:55 INFO ===== 開始 =====
+2026-11-07 13:54:56 INFO 限抽套組: 老闆發瘋蒐藏系列080 (id 2565) 3000 鑽/抽，每人限 1 抽，剩 187/300，已抽完額度
+2026-11-07 13:54:56 INFO 限抽套組: 特別活動蒐藏系列071 (id 2564) 10 鑽/抽，每人限 100 抽，剩 19679/30000
+2026-11-07 13:54:56 INFO 登入成功，目前鑽石 4,721
+2026-11-07 13:54:56 INFO --- 特別活動蒐藏系列071 (id 2564)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-07 13:54:56 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,621 鑽
+2026-11-07 13:54:56 INFO   其他回應欄位: {"status": "revealed", "orderId": 372331, "orderNo": "LOT202611070554570512158804119", "lotterySetId": 2564, "lotterySetName": "特別活動蒐藏系列071", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4621}
+2026-11-07 13:54:57 INFO 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,521 鑽
+2026-11-07 13:54:57 INFO   其他回應欄位: {"status": "revealed", "orderId": 372332, "orderNo": "LOT202611070554574052490643329", "lotterySetId": 2564, "lotterySetName": "特別活動蒐藏系列071", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4521}
+2026-11-07 13:54:57 INFO 抽了 10 抽 (這輪累計 30，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,421 鑽
+2026-11-07 13:54:57 INFO   其他回應欄位: {"status": "revealed", "orderId": 372333, "orderNo": "LOT202611070554577662252997445", "lotterySetId": 2564, "lotterySetName": "特別活動蒐藏系列071", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4421}
+2026-11-07 13:54:57 INFO 這套額度已用完 (限 100 抽，剩 0 抽)
+2026-11-07 13:55:00 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x30
+2026-11-07 13:55:01 INFO 成功兌換 30 個獎品，獲得 150 鑽石
+2026-11-07 13:55:01 INFO 開了 LV1 木紋寶箱 x4，獲得 158 鑽石
+2026-11-07 13:55:01 INFO 登入成功，目前鑽石 4,729
+2026-11-07 13:55:01 INFO ===== 結束 =====
+2026-11-08 12:30:02 INFO ===== 開始 =====
+2026-11-08 12:30:03 INFO 限抽套組: 老闆發瘋蒐藏系列081 (id 2586) 3000 鑽/抽，每人限 1 抽，剩 244/300
+2026-11-08 12:30:03 INFO 限抽套組: 特別活動蒐藏系列072 (id 2585) 10 鑽/抽，每人限 100 抽，剩 24748/30000
+2026-11-08 12:30:03 INFO 登入成功，目前鑽石 57
+2026-11-08 12:30:03 INFO --- 老闆發瘋蒐藏系列081 (id 2586)：3000 鑽/抽，每人限 1 抽，每次 1 抽
+2026-11-08 12:30:03 WARNING 鑽石不足 (剩 57，這次要 3,000)，這輪先停在 0 抽
+2026-11-08 12:30:03 INFO --- 特別活動蒐藏系列072 (id 2585)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-08 12:30:03 WARNING 鑽石不足 (剩 57，這次要 100)，這輪先停在 0 抽
+2026-11-08 12:30:06 INFO 沒有待換鑽石的獎品
+2026-11-08 12:30:06 INFO 開了 LV1 木紋寶箱 x1，獲得 32 鑽石
+2026-11-08 12:30:06 INFO 登入成功，目前鑽石 89
+2026-11-08 12:30:06 WARNING 老闆發瘋蒐藏系列081 鑽石不夠，換完鑽石也抽不了，這次不抽了
+2026-11-08 12:30:06 WARNING 特別活動蒐藏系列072 鑽石不夠，換完鑽石也抽不了，這次不抽了
+2026-11-08 12:30:06 INFO ===== 結束 =====
+2026-11-08 15:58:52 INFO ===== 開始 =====
+2026-11-08 15:58:53 INFO 限抽套組: 老闆發瘋蒐藏系列081 (id 2586) 3000 鑽/抽，每人限 1 抽，剩 161/300
+2026-11-08 15:58:53 INFO 限抽套組: 特別活動蒐藏系列072 (id 2585) 10 鑽/抽，每人限 100 抽，剩 16737/30000
+2026-11-08 15:58:53 INFO 登入成功，目前鑽石 3,157
+2026-11-08 15:58:53 INFO --- 老闆發瘋蒐藏系列081 (id 2586)：3000 鑽/抽，每人限 1 抽，每次 1 抽
+2026-11-08 15:58:53 INFO 抽了 1 抽 (這輪累計 1，每人限 1)：B賞 銀寶箱 (隨機3000鑽石以上商品) x1，剩 157 鑽
+2026-11-08 15:58:53 INFO   其他回應欄位: {"status": "revealed", "orderId": 376270, "orderNo": "LOT202611080758539672472928166", "lotterySetId": 2586, "lotterySetName": "老闆發瘋蒐藏系列081", "totalAmount": 3000, "drawCount": 1, "extendTimeRightStatus": 0, "gamePointsAfter": 157}
+2026-11-08 15:58:53 INFO --- 特別活動蒐藏系列072 (id 2585)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-08 15:58:53 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 57 鑽
+2026-11-08 15:58:53 INFO   其他回應欄位: {"status": "revealed", "orderId": 376271, "orderNo": "LOT202611080758542977011680850", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 57}
+2026-11-08 15:58:53 WARNING 鑽石不足 (剩 57，這次要 100)，這輪先停在 10 抽
+2026-11-08 15:58:57 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x10
+2026-11-08 15:58:57 INFO 待換: B賞 銀寶箱 (隨機3000鑽石以上商品) (3000 鑽) x1
+2026-11-08 15:58:57 INFO 成功兌換 11 個獎品，獲得 3,050 鑽石
+2026-11-08 15:58:57 INFO 開了 LV1 木紋寶箱 x4，獲得 135 鑽石
+2026-11-08 15:58:57 INFO 登入成功，目前鑽石 3,242
+2026-11-08 15:58:57 INFO --- 特別活動蒐藏系列072 (id 2585)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-08 15:58:57 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 3,142 鑽
+2026-11-08 15:58:57 INFO   其他回應欄位: {"status": "revealed", "orderId": 376272, "orderNo": "LOT202611080758580413686752797", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 3142}
+2026-11-08 15:58:58 INFO 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 3,042 鑽
+2026-11-08 15:58:58 INFO   其他回應欄位: {"status": "revealed", "orderId": 376273, "orderNo": "LOT202611080758584198478100030", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 3042}
+2026-11-08 15:58:58 INFO 抽了 10 抽 (這輪累計 30，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,942 鑽
+2026-11-08 15:58:58 INFO   其他回應欄位: {"status": "revealed", "orderId": 376274, "orderNo": "LOT202611080758587691868863020", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2942}
+2026-11-08 15:58:58 INFO 抽了 10 抽 (這輪累計 40，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,842 鑽
+2026-11-08 15:58:58 INFO   其他回應欄位: {"status": "revealed", "orderId": 376275, "orderNo": "LOT202611080758591424111693112", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2842}
+2026-11-08 15:58:59 INFO 抽了 10 抽 (這輪累計 50，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,742 鑽
+2026-11-08 15:58:59 INFO   其他回應欄位: {"status": "revealed", "orderId": 376276, "orderNo": "LOT202611080758595020406060625", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2742}
+2026-11-08 15:58:59 INFO 抽了 10 抽 (這輪累計 60，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x9、A賞 隨機未鑑定寶可夢卡牌 (AR) x1，剩 2,642 鑽
+2026-11-08 15:58:59 INFO   其他回應欄位: {"status": "revealed", "orderId": 376277, "orderNo": "LOT202611080758598606961995015", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2642}
+2026-11-08 15:58:59 INFO 抽了 10 抽 (這輪累計 70，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,542 鑽
+2026-11-08 15:58:59 INFO   其他回應欄位: {"status": "revealed", "orderId": 376278, "orderNo": "LOT202611080759002024661958646", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2542}
+2026-11-08 15:59:00 INFO 抽了 10 抽 (這輪累計 80，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,442 鑽
+2026-11-08 15:59:00 INFO   其他回應欄位: {"status": "revealed", "orderId": 376279, "orderNo": "LOT202611080759006596899895045", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2442}
+2026-11-08 15:59:00 INFO 抽了 10 抽 (這輪累計 90，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,342 鑽
+2026-11-08 15:59:00 INFO   其他回應欄位: {"status": "revealed", "orderId": 376280, "orderNo": "LOT202611080759010050738850888", "lotterySetId": 2585, "lotterySetName": "特別活動蒐藏系列072", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2342}
+2026-11-08 15:59:01 INFO 這套額度已用完 (限 100 抽，剩 0 抽)
+2026-11-08 15:59:04 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x89
+2026-11-08 15:59:04 INFO 待換: A賞 隨機未鑑定寶可夢卡牌 (AR) (1000 鑽) x1
+2026-11-08 15:59:04 INFO 成功兌換 50 個獎品，獲得 1,245 鑽石
+2026-11-08 15:59:04 INFO 成功兌換 40 個獎品，獲得 200 鑽石
+2026-11-08 15:59:04 INFO 開了 LV1 木紋寶箱 x9，獲得 344 鑽石
+2026-11-08 15:59:04 INFO 登入成功，目前鑽石 4,131
+2026-11-08 15:59:04 INFO ===== 結束 =====
+2026-11-09 12:30:02 INFO ===== 開始 =====
+2026-11-09 12:30:02 INFO 限抽套組: 老闆發瘋蒐藏系列082 (id 2598) 3000 鑽/抽，每人限 1 抽，剩 231/300
+2026-11-09 12:30:02 INFO 限抽套組: 特別活動蒐藏系列073 (id 2597) 10 鑽/抽，每人限 100 抽，剩 24109/30000
+2026-11-09 12:30:02 INFO 登入成功，目前鑽石 3,091
+2026-11-09 12:30:02 INFO --- 老闆發瘋蒐藏系列082 (id 2598)：3000 鑽/抽，每人限 1 抽，每次 1 抽
+2026-11-09 12:30:03 INFO 抽了 1 抽 (這輪累計 1，每人限 1)：B賞 銀寶箱 (隨機3000鑽石以上商品) x1，剩 91 鑽
+2026-11-09 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 379084, "orderNo": "LOT202611090430031431103235531", "lotterySetId": 2598, "lotterySetName": "老闆發瘋蒐藏系列082", "totalAmount": 3000, "drawCount": 1, "extendTimeRightStatus": 0, "gamePointsAfter": 91}
+2026-11-09 12:30:03 INFO --- 特別活動蒐藏系列073 (id 2597)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-09 12:30:03 WARNING 鑽石不足 (剩 91，這次要 100)，這輪先停在 0 抽
+2026-11-09 12:30:06 INFO 待換: B賞 銀寶箱 (隨機3000鑽石以上商品) (3000 鑽) x1
+2026-11-09 12:30:06 INFO 成功兌換 1 個獎品，獲得 3,000 鑽石
+2026-11-09 12:30:06 INFO 開了 LV1 木紋寶箱 x2，獲得 82 鑽石
+2026-11-09 12:30:06 INFO 登入成功，目前鑽石 3,173
+2026-11-09 12:30:06 INFO --- 特別活動蒐藏系列073 (id 2597)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-09 12:30:06 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 3,073 鑽
+2026-11-09 12:30:06 INFO   其他回應欄位: {"status": "revealed", "orderId": 379085, "orderNo": "LOT202611090430068721485893799", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 3073}
+2026-11-09 12:30:07 INFO 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,973 鑽
+2026-11-09 12:30:07 INFO   其他回應欄位: {"status": "revealed", "orderId": 379086, "orderNo": "LOT202611090430072248904244712", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2973}
+2026-11-09 12:30:07 INFO 抽了 10 抽 (這輪累計 30，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,873 鑽
+2026-11-09 12:30:07 INFO   其他回應欄位: {"status": "revealed", "orderId": 379087, "orderNo": "LOT202611090430075648478880835", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2873}
+2026-11-09 12:30:08 INFO 抽了 10 抽 (這輪累計 40，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,773 鑽
+2026-11-09 12:30:08 INFO   其他回應欄位: {"status": "revealed", "orderId": 379088, "orderNo": "LOT202611090430080031500526383", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2773}
+2026-11-09 12:30:08 INFO 抽了 10 抽 (這輪累計 50，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,673 鑽
+2026-11-09 12:30:08 INFO   其他回應欄位: {"status": "revealed", "orderId": 379089, "orderNo": "LOT202611090430083325299688298", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2673}
+2026-11-09 12:30:08 INFO 抽了 10 抽 (這輪累計 60，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,573 鑽
+2026-11-09 12:30:08 INFO   其他回應欄位: {"status": "revealed", "orderId": 379090, "orderNo": "LOT202611090430086803872624108", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2573}
+2026-11-09 12:30:09 INFO 抽了 10 抽 (這輪累計 70，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,473 鑽
+2026-11-09 12:30:09 INFO   其他回應欄位: {"status": "revealed", "orderId": 379091, "orderNo": "LOT202611090430090601730277957", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2473}
+2026-11-09 12:30:09 INFO 抽了 10 抽 (這輪累計 80，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,373 鑽
+2026-11-09 12:30:09 INFO   其他回應欄位: {"status": "revealed", "orderId": 379092, "orderNo": "LOT202611090430094182872924030", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2373}
+2026-11-09 12:30:09 INFO 抽了 10 抽 (這輪累計 90，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,273 鑽
+2026-11-09 12:30:09 INFO   其他回應欄位: {"status": "revealed", "orderId": 379093, "orderNo": "LOT202611090430097616636266042", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2273}
+2026-11-09 12:30:10 INFO 抽了 10 抽 (這輪累計 100，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 2,173 鑽
+2026-11-09 12:30:10 INFO   其他回應欄位: {"status": "revealed", "orderId": 379094, "orderNo": "LOT202611090430101401013417522", "lotterySetId": 2597, "lotterySetName": "特別活動蒐藏系列073", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 2173}
+2026-11-09 12:30:13 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x100
+2026-11-09 12:30:13 INFO 成功兌換 50 個獎品，獲得 250 鑽石
+2026-11-09 12:30:13 INFO 成功兌換 50 個獎品，獲得 250 鑽石
+2026-11-09 12:30:13 INFO 開了 LV1 木紋寶箱 x11，獲得 549 鑽石
+2026-11-09 12:30:13 INFO 登入成功，目前鑽石 3,222
+2026-11-09 12:30:13 INFO ===== 結束 =====
+2026-11-10 12:30:02 INFO ===== 開始 =====
+2026-11-10 12:30:02 INFO 限抽套組: 老闆發瘋蒐藏系列083 (id 2633) 3000 鑽/抽，每人限 1 抽，剩 246/300
+2026-11-10 12:30:02 INFO 限抽套組: 特別活動蒐藏系列074 (id 2632) 10 鑽/抽，每人限 100 抽，剩 24917/30000
+2026-11-10 12:30:02 INFO 登入成功，目前鑽石 4,395
+2026-11-10 12:30:02 INFO --- 老闆發瘋蒐藏系列083 (id 2633)：3000 鑽/抽，每人限 1 抽，每次 1 抽
+2026-11-10 12:30:03 INFO 抽了 1 抽 (這輪累計 1，每人限 1)：B賞 銀寶箱 (隨機3000鑽石以上商品) x1，剩 1,395 鑽
+2026-11-10 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 383752, "orderNo": "LOT202611100430031087169148717", "lotterySetId": 2633, "lotterySetName": "老闆發瘋蒐藏系列083", "totalAmount": 3000, "drawCount": 1, "extendTimeRightStatus": 0, "gamePointsAfter": 1395}
+2026-11-10 12:30:03 INFO --- 特別活動蒐藏系列074 (id 2632)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-10 12:30:03 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,295 鑽
+2026-11-10 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 383753, "orderNo": "LOT202611100430034214069912266", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1295}
+2026-11-10 12:30:03 INFO 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,195 鑽
+2026-11-10 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 383754, "orderNo": "LOT202611100430037784351741334", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1195}
+2026-11-10 12:30:04 INFO 抽了 10 抽 (這輪累計 30，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,095 鑽
+2026-11-10 12:30:04 INFO   其他回應欄位: {"status": "revealed", "orderId": 383755, "orderNo": "LOT202611100430041162352999187", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1095}
+2026-11-10 12:30:04 INFO 抽了 10 抽 (這輪累計 40，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 995 鑽
+2026-11-10 12:30:04 INFO   其他回應欄位: {"status": "revealed", "orderId": 383756, "orderNo": "LOT202611100430044530821571516", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 995}
+2026-11-10 12:30:04 INFO 抽了 10 抽 (這輪累計 50，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 895 鑽
+2026-11-10 12:30:04 INFO   其他回應欄位: {"status": "revealed", "orderId": 383757, "orderNo": "LOT202611100430047922504505061", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 895}
+2026-11-10 12:30:05 INFO 抽了 10 抽 (這輪累計 60，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 795 鑽
+2026-11-10 12:30:05 INFO   其他回應欄位: {"status": "revealed", "orderId": 383758, "orderNo": "LOT202611100430051584875853903", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 795}
+2026-11-10 12:30:05 INFO 抽了 10 抽 (這輪累計 70，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 695 鑽
+2026-11-10 12:30:05 INFO   其他回應欄位: {"status": "revealed", "orderId": 383759, "orderNo": "LOT202611100430055309443119513", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 695}
+2026-11-10 12:30:05 INFO 抽了 10 抽 (這輪累計 80，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 595 鑽
+2026-11-10 12:30:05 INFO   其他回應欄位: {"status": "revealed", "orderId": 383760, "orderNo": "LOT202611100430058529817957311", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 595}
+2026-11-10 12:30:26 WARNING 這輪抽到 80 抽被擋: The read operation timed out
+2026-11-10 12:30:29 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x80
+2026-11-10 12:30:29 INFO 待換: B賞 銀寶箱 (隨機3000鑽石以上商品) (3000 鑽) x1
+2026-11-10 12:30:29 INFO 成功兌換 50 個獎品，獲得 250 鑽石
+2026-11-10 12:30:29 INFO 成功兌換 31 個獎品，獲得 3,150 鑽石
+2026-11-10 12:30:29 INFO 開了 LV1 木紋寶箱 x11，獲得 797 鑽石
+2026-11-10 12:30:29 INFO 登入成功，目前鑽石 4,792
+2026-11-10 12:30:29 INFO 還有 1 套沒抽滿，10 分鐘後再試
+2026-11-10 12:40:29 INFO --- 特別活動蒐藏系列074 (id 2632)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-10 12:40:30 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,692 鑽
+2026-11-10 12:40:30 INFO   其他回應欄位: {"status": "revealed", "orderId": 383859, "orderNo": "LOT202611100440300973097497590", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4692}
+2026-11-10 12:40:30 INFO 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,592 鑽
+2026-11-10 12:40:30 INFO   其他回應欄位: {"status": "revealed", "orderId": 383860, "orderNo": "LOT202611100440304890269034517", "lotterySetId": 2632, "lotterySetName": "特別活動蒐藏系列074", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4592}
+2026-11-10 12:40:30 INFO 這套額度已用完 (限 100 抽，剩 0 抽)
+2026-11-10 12:40:33 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x20
+2026-11-10 12:40:34 INFO 成功兌換 20 個獎品，獲得 100 鑽石
+2026-11-10 12:40:34 INFO 開了 LV1 木紋寶箱 x2，獲得 92 鑽石
+2026-11-10 12:40:34 INFO 登入成功，目前鑽石 4,784
+2026-11-10 12:40:34 INFO ===== 結束 =====
+2026-11-11 12:30:02 INFO ===== 開始 =====
+2026-11-11 12:30:02 INFO 限抽套組: 老闆發瘋蒐藏系列084 (id 2643) 3000 鑽/抽，每人限 1 抽，剩 238/300
+2026-11-11 12:30:02 INFO 限抽套組: 特別活動蒐藏系列076 (id 2642) 10 鑽/抽，每人限 100 抽，剩 24176/30000
+2026-11-11 12:30:03 INFO 登入成功，目前鑽石 4,784
+2026-11-11 12:30:03 INFO --- 老闆發瘋蒐藏系列084 (id 2643)：3000 鑽/抽，每人限 1 抽，每次 1 抽
+2026-11-11 12:30:03 INFO 抽了 1 抽 (這輪累計 1，每人限 1)：A賞 金寶箱 (隨機5000鑽石以上商品) x1，剩 1,784 鑽
+2026-11-11 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 387517, "orderNo": "LOT202611110430031900412223038", "lotterySetId": 2643, "lotterySetName": "老闆發瘋蒐藏系列084", "totalAmount": 3000, "drawCount": 1, "extendTimeRightStatus": 0, "gamePointsAfter": 1784}
+2026-11-11 12:30:03 INFO --- 特別活動蒐藏系列076 (id 2642)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-11 12:30:03 INFO 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,684 鑽
+2026-11-11 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 387518, "orderNo": "LOT202611110430034786701383857", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1684}
+2026-11-11 12:30:03 INFO 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,584 鑽
+2026-11-11 12:30:03 INFO   其他回應欄位: {"status": "revealed", "orderId": 387519, "orderNo": "LOT202611110430038435687735461", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1584}
+2026-11-11 12:30:04 INFO 抽了 10 抽 (這輪累計 30，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,484 鑽
+2026-11-11 12:30:04 INFO   其他回應欄位: {"status": "revealed", "orderId": 387520, "orderNo": "LOT202611110430041640507199766", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1484}
+2026-11-11 12:30:04 INFO 抽了 10 抽 (這輪累計 40，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,384 鑽
+2026-11-11 12:30:04 INFO   其他回應欄位: {"status": "revealed", "orderId": 387521, "orderNo": "LOT202611110430045687483130461", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1384}
+2026-11-11 12:30:04 INFO 抽了 10 抽 (這輪累計 50，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,284 鑽
+2026-11-11 12:30:04 INFO   其他回應欄位: {"status": "revealed", "orderId": 387522, "orderNo": "LOT202611110430049127358392235", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1284}
+2026-11-11 12:30:05 INFO 抽了 10 抽 (這輪累計 60，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,184 鑽
+2026-11-11 12:30:05 INFO   其他回應欄位: {"status": "revealed", "orderId": 387523, "orderNo": "LOT202611110430052732846649797", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1184}
+2026-11-11 12:30:05 INFO 抽了 10 抽 (這輪累計 70，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 1,084 鑽
+2026-11-11 12:30:05 INFO   其他回應欄位: {"status": "revealed", "orderId": 387524, "orderNo": "LOT202611110430055844851509649", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 1084}
+2026-11-11 12:30:05 INFO 抽了 10 抽 (這輪累計 80，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x9、A賞 隨機未鑑定寶可夢卡牌 (AR) x1，剩 984 鑽
+2026-11-11 12:30:05 INFO   其他回應欄位: {"status": "revealed", "orderId": 387525, "orderNo": "LOT202611110430059616705943756", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 984}
+2026-11-11 12:30:06 INFO 抽了 10 抽 (這輪累計 90，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 884 鑽
+2026-11-11 12:30:06 INFO   其他回應欄位: {"status": "revealed", "orderId": 387526, "orderNo": "LOT202611110430062966716502748", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 884}
+2026-11-11 12:30:06 INFO 抽了 10 抽 (這輪累計 100，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 784 鑽
+2026-11-11 12:30:06 INFO   其他回應欄位: {"status": "revealed", "orderId": 387527, "orderNo": "LOT202611110430066391174983612", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 784}
+2026-11-11 12:30:09 INFO 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x99
+2026-11-11 12:30:09 INFO 待換: A賞 隨機未鑑定寶可夢卡牌 (AR) (1000 鑽) x1
+2026-11-11 12:30:09 INFO 待換: A賞 金寶箱 (隨機5000鑽石以上商品) (5000 鑽) x1
+2026-11-11 12:30:09 INFO 成功兌換 50 個獎品，獲得 1,245 鑽石
+2026-11-11 12:30:10 INFO 成功兌換 50 個獎品，獲得 250 鑽石
+2026-11-11 12:30:10 INFO 成功兌換 1 個獎品，獲得 5,000 鑽石
+2026-11-11 12:30:10 INFO 開了 LV1 木紋寶箱 x13，獲得 639 鑽石
+2026-11-11 12:30:10 INFO 登入成功，目前鑽石 7,918
+2026-11-11 12:30:10 INFO ===== 結束 =====
+2026-11-12 04:03:49 INFO ===== 開始 =====
+2026-11-12 04:03:50 INFO 限抽套組: 老闆發瘋蒐藏系列084 (id 2643) 3000 鑽/抽，每人限 1 抽，剩 86/300，已抽完額度: 帳號1
+2026-11-12 04:03:50 INFO 限抽套組: 特別活動蒐藏系列076 (id 2642) 10 鑽/抽，每人限 100 抽，剩 8920/30000，已抽完額度: 帳號1
+2026-11-12 04:03:50 INFO 帳號: 帳號1、帳號2
+2026-11-12 04:04:52 INFO ===== 開始 =====
+2026-11-12 04:04:52 INFO 限抽套組: 老闆發瘋蒐藏系列084 (id 2643) 3000 鑽/抽，每人限 1 抽，剩 86/300，已抽完額度: 帳號1
+2026-11-12 04:04:52 INFO 限抽套組: 特別活動蒐藏系列076 (id 2642) 10 鑽/抽，每人限 100 抽，剩 8920/30000，已抽完額度: 帳號1
+2026-11-12 04:04:52 INFO 帳號: 帳號1、帳號2
+2026-11-12 04:05:28 INFO ===== 開始 =====
+2026-11-12 04:05:28 INFO 限抽套組: 老闆發瘋蒐藏系列084 (id 2643) 3000 鑽/抽，每人限 1 抽，剩 86/300，已抽完額度: 帳號1
+2026-11-12 04:05:28 INFO 限抽套組: 特別活動蒐藏系列076 (id 2642) 10 鑽/抽，每人限 100 抽，剩 8920/30000，已抽完額度: 帳號1
+2026-11-12 04:05:28 INFO [帳號1] 登入成功，目前鑽石 7,403
+2026-11-12 04:05:32 INFO [帳號1] 沒有待換鑽石的獎品
+2026-11-12 04:05:32 INFO [帳號1] 沒有未開的寶箱
+2026-11-12 04:05:32 INFO [帳號1] 登入成功，目前鑽石 7,403
+2026-11-12 04:05:32 INFO [帳號2] 登入成功，目前鑽石 3,115
+2026-11-12 04:05:32 INFO [帳號2] --- 老闆發瘋蒐藏系列084 (id 2643)：3000 鑽/抽，每人限 1 抽，每次 1 抽
+2026-11-12 04:05:32 INFO [帳號2] 抽了 1 抽 (這輪累計 1，每人限 1)：A賞 金寶箱 (隨機5000鑽石以上商品) x1，剩 115 鑽
+2026-11-12 04:05:32 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391167, "orderNo": "LOT202611112005326201999302782", "lotterySetId": 2643, "lotterySetName": "老闆發瘋蒐藏系列084", "totalAmount": 3000, "drawCount": 1, "extendTimeRightStatus": 0, "gamePointsAfter": 115}
+2026-11-12 04:05:32 INFO [帳號2] --- 特別活動蒐藏系列076 (id 2642)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-12 04:05:32 INFO [帳號2] 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 15 鑽
+2026-11-12 04:05:32 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391168, "orderNo": "LOT202611112005329632362383061", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 15}
+2026-11-12 04:05:32 WARNING [帳號2] 鑽石不足 (剩 15，這次要 100)，這輪先停在 10 抽
+2026-11-12 04:05:36 INFO [帳號2] 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x10
+2026-11-12 04:05:36 INFO [帳號2] 待換: A賞 金寶箱 (隨機5000鑽石以上商品) (5000 鑽) x1
+2026-11-12 04:05:36 INFO [帳號2] 成功兌換 11 個獎品，獲得 5,050 鑽石
+2026-11-12 04:05:36 INFO [帳號2] 開了 LV1 木紋寶箱 x4，獲得 245 鑽石
+2026-11-12 04:05:36 INFO [帳號2] 登入成功，目前鑽石 5,310
+2026-11-12 04:05:36 INFO [帳號2] --- 特別活動蒐藏系列076 (id 2642)：10 鑽/抽，每人限 100 抽，每次 10 抽
+2026-11-12 04:05:36 INFO [帳號2] 抽了 10 抽 (這輪累計 10，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 5,210 鑽
+2026-11-12 04:05:36 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391169, "orderNo": "LOT202611112005367309658369124", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 5210}
+2026-11-12 04:05:37 INFO [帳號2] 抽了 10 抽 (這輪累計 20，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 5,110 鑽
+2026-11-12 04:05:37 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391170, "orderNo": "LOT202611112005371171086602100", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 5110}
+2026-11-12 04:05:37 INFO [帳號2] 抽了 10 抽 (這輪累計 30，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 5,010 鑽
+2026-11-12 04:05:37 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391171, "orderNo": "LOT202611112005375210119143735", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 5010}
+2026-11-12 04:05:37 INFO [帳號2] 抽了 10 抽 (這輪累計 40，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,910 鑽
+2026-11-12 04:05:37 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391172, "orderNo": "LOT202611112005379075296493439", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4910}
+2026-11-12 04:05:38 INFO [帳號2] 抽了 10 抽 (這輪累計 50，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,810 鑽
+2026-11-12 04:05:38 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391173, "orderNo": "LOT202611112005382895079942076", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4810}
+2026-11-12 04:05:38 INFO [帳號2] 抽了 10 抽 (這輪累計 60，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,710 鑽
+2026-11-12 04:05:38 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391174, "orderNo": "LOT202611112005386955432698270", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4710}
+2026-11-12 04:05:39 INFO [帳號2] 抽了 10 抽 (這輪累計 70，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,610 鑽
+2026-11-12 04:05:39 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391175, "orderNo": "LOT202611112005390599359653649", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4610}
+2026-11-12 04:05:39 INFO [帳號2] 抽了 10 抽 (這輪累計 80，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,510 鑽
+2026-11-12 04:05:39 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391176, "orderNo": "LOT202611112005394485448607228", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4510}
+2026-11-12 04:05:39 INFO [帳號2] 抽了 10 抽 (這輪累計 90，每人限 100)：Z賞 隨機未鑑定寶可夢卡牌 (普卡) x10，剩 4,410 鑽
+2026-11-12 04:05:39 INFO [帳號2]   其他回應欄位: {"status": "revealed", "orderId": 391177, "orderNo": "LOT202611112005398320244840851", "lotterySetId": 2642, "lotterySetName": "特別活動蒐藏系列076", "totalAmount": 100, "drawCount": 10, "extendTimeRightStatus": 0, "gamePointsAfter": 4410}
+2026-11-12 04:05:40 INFO [帳號2] 這套額度已用完 (限 100 抽，剩 0 抽)
+2026-11-12 04:05:43 INFO [帳號2] 待換: Z賞 隨機未鑑定寶可夢卡牌 (普卡) (5 鑽) x90
+2026-11-12 04:05:43 INFO [帳號2] 成功兌換 50 個獎品，獲得 250 鑽石
+2026-11-12 04:05:43 INFO [帳號2] 成功兌換 40 個獎品，獲得 200 鑽石
+2026-11-12 04:05:43 INFO [帳號2] 開了 LV1 木紋寶箱 x9，獲得 423 鑽石
+2026-11-12 04:05:43 INFO [帳號2] 登入成功，目前鑽石 5,283
+2026-11-12 04:05:43 INFO ===== 結束 =====
